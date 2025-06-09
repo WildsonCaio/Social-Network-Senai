@@ -6,17 +6,15 @@
     <title>Página Inicial</title>
 </head>
 <body>
+
+    <h1>{{user}}</h1>
     
-    <h1>POSTAGENS</h1>
+    <form method="POST">{% csrf_token %}
 
-    {% for post in posts %}
+        <input type="text" name="reset-password">
+        <button type="submit" >Redefinir Senha</button>
 
-        <p>{{ post.title }}</p>
-        <p>{{ post.content }}</p>
-        <p>{{ post.created_at|date:'d/m/Y H:m' }}</p>
-        <p>{{ post.user }}</p>
-
-    {% endfor  %}
+    </form>
     
 
 </body>

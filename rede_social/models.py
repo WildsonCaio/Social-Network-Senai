@@ -33,7 +33,7 @@ STATUS = {
 }
 import uuid
 class Invite(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    # id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     status = models.CharField(max_length=8, choices=STATUS)
     created_at = models.DateTimeField(auto_now_add=True)
     accept_at = models.DateTimeField(auto_now_add=True)
